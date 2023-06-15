@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style1.css') }}">
+</head>
+   
+  </head>
+  <body>
+    <div class="center">
+      <p>Customer Intention Prediction <br> A Major Project Demo</p>
+      <form action="/tweets" method = "POST">
+        <label for="fname">Input Tweets</label>
+        <input type="text" id="fname" name="fname">
+        <h4 align = "center"<b>{{tweet}}</b></h4>
+        <br>
+        <h4 align = "center"<b>{{pred}}</b></h4>
+        <br>
+
+        <h4 align = "center"<b>{{pred_of_SVM}}</b></h4>
+            <br>
+
+            <h4 align = "center"<b>{{pred_of_RFC}}</b></h4>
+            <br>
+
+    </div>
+    <div class="button">
+      <a href="{{ url_for('homepage') }}">Predict</a>
+    </div>
+
+
+  </body>
+</html>

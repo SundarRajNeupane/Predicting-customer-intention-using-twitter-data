@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style2.css') }}">
+</head>
+   
+  </head>
+  <body>
+    <div class="center">
+        <p>Results</p> <br>
+        <h2>The Prediction through RFC is: <b>{{pred_of_RFC_text}}</b> <br></h2>
+        <h2>The Prediction through SVM is: <b>{{pred_of_SVM_text}}</b>   <br></h2>
+        <h2>The Probability of buying iphone  is: <b>{{prediction}}</b> </h2>
+      </div> 
+      
+    
+      <div class="button">
+          <a href="{{ url_for('homepage') }}">Restart</a>
+      </div>
+  </body>
+</html>
